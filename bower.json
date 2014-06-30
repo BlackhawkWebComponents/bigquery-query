@@ -1,0 +1,7 @@
+{
+  "name": "bigquery-query#gh-pages",
+  "private": true,
+  "dependencies": {
+    "bigquery-query": "BlackhawkWebComponents/bigquery-query#master"
+  }
+}

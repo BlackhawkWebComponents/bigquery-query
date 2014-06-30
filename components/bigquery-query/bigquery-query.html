@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../query-base/query-base.html">
+
+<!--
+Element providing abstract query support for bigquery
+
+##### Example
+
+    <bigquery-query outputQuery="{{outputQuery}}">
+        <q-select>
+            <q-field expr="actor1knowngroupcode"></q-field>
+            <q-field expr="count(*)" as="actor1_knowngroup_count"></q-field>
+        </q-select>
+        <q-from>
+            <q-dataset name="[gdelt-bq:full.events]"></q-dataset>
+        </q-from>
+        <q-where>
+            <q-condition field="actor1knowngroupcode" op="isnotnull"></q-condition>
+            <q-condition field="actiongeo_countrycode" op="equals" value="'IZ'"></q-condition>
+            <q-condition field="year" op="equals" value="2014"></q-condition>
+        </q-where>
+        <q-group-by fields="['actor1knowngroupcode']"></q-group-by>
+    </bigquery-query>
+
+@element bigquery-query
+@extends query-base
+@blurb Element providing abstract query support for bigquery
+@status alpha
+@url http://blackhawkwebcomponents.github.io/bigquery-query
+-->
+<polymer-element name="bigquery-query" extends="query-base" attributes="outputQuery">
+    <template>
+        <shadow></shadow>
+    </template>
+    <script>
+        Polymer('bigquery-query', {
+
+
+        });
+    </script>
+</polymer-element>
+
