@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../query-base/query-base.html">
+<link rel="import" href="../structured-query/structured-query.html">
 
 <!--
 Element providing abstract query support for bigquery
@@ -23,12 +23,12 @@ Element providing abstract query support for bigquery
     </bigquery-query>
 
 @element bigquery-query
-@extends query-base
+@extends structured-query
 @blurb Element providing abstract query support for bigquery
 @status alpha
 @url http://blackhawkwebcomponents.github.io/bigquery-query
 -->
-<polymer-element name="bigquery-query" extends="query-base" attributes="outputQuery">
+<polymer-element name="bigquery-query" extends="structured-query" attributes="outputQuery">
     <template>
         <shadow></shadow>
     </template>
